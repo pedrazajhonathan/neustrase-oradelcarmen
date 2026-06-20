@@ -247,7 +247,12 @@ header{
     }
     .son_one{
         width: 170px;
+        height: 320px;
     }
+    .son_one .parrafo{
+        bottom: 2px;
+    }
+
 }
 
 /*----------------*/
