@@ -158,6 +158,14 @@ header{
     .seccion_one .articulo_one .father_table{
         width: 95%;
     }
+    .seccion_one .articulo_one{
+        height: 49%;
+        width: 100%;
+    }
+    .seccion_one .articulo_two{
+        height: 49%;
+        width: 100%;
+    }
 
 }
 
