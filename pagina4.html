@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acción y Caridad - Iglesia Católica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Variables y Configuración General --- */
+:root {
+    --bg-color: #fafbfc;
+    --card-bg: #ffffff;
+    --primary-color: #a88a38;
+    --text-dark: #2b2d42;
+    --text-muted: #5c5e6e;
+    --border-color: #e9ecef;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo i {
+    color: var(--primary-color);
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--primary-color);
+}
+
+/* --- Contenedor del Artículo --- */
+.main-content {
+    padding: 60px 20px;
+}
+
+.article-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* --- Encabezado --- */
+.article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.article-header .category {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.article-header h1 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin: 12px 0 20px 0;
+}
+
+.article-header .lead {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.meta-divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--border-color);
+    margin: 30px auto 0 auto;
+}
+
+/* --- Secciones de Misión --- */
+.article-body > p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.mission-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.mission-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    background-color: rgba(168, 138, 56, 0.08);
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mission-info h3 {
+    font-size: 19px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.mission-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Variación para el bloque final destacado */
+.mission-info.full-width {
+    background-color: #fafbfc;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* --- Diseño Adaptable --- */
+@media (max-width: 600px) {
+    .article-container {
+        padding: 30px 20px;
+    }
+
+    .article-header h1 {
+        font-size: 28px;
+    }
+
+    .mission-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><i class="fa-solid fa-cross"></i> FeCatólica</a>
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="article-container">
+            
+            <header class="article-header">
+                <span class="category">Misión Social</span>
+                <h1>Acción Social y Caridad</h1>
+                <p class="lead">La fe en acción a través del servicio a los más vulnerables, la educación, la salud y la promoción de la dignidad humana.</p>
+                <div class="meta-divider"></div>
+            </header>
+
+            <section class="article-body">
+                
+                <p>Para la Iglesia Católica, la caridad no es una actividad secundaria, sino una parte esencial de su naturaleza y una expresión directa del Evangelio. A través de una red global de organizaciones y el trabajo voluntario, se busca responder a las crisis humanitarias y a las necesidades cotidianas de las comunidades.</p>
+
+                <div class="mission-row">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="mission-info">
+                        <h3>Asistencia Humanitaria Global</h3>
+                        <p>A través de redes como Cáritas Internacional y múltiples congregaciones religiosas, la Iglesia provee refugio, alimento y apoyo en emergencias provocadas por desastres naturales, conflictos armados y pobreza extrema en los cinco continentes.</p>
+                    </div>
+                </div>
+
+                <div class="mission-row">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="mission-info">
+                        <h3>Educación y Desarrollo</h3>
+                        <p>La Iglesia gestiona una de las redes educativas privadas más grandes del mundo, que incluye escuelas primarias, secundarias y universidades de renombre. Muchas de estas instituciones operan en zonas vulnerables para garantizar el acceso al conocimiento y al desarrollo integral.</p>
+                    </div>
+                </div>
+
+                <div class="mission-row">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div class="mission-info">
+                        <h3>Salud y Cuidado Sanitario</h3>
+                        <p>Miles de hospitales, dispensarios, centros de atención para la tercera edad y hogares para personas con discapacidad son administrados por la Iglesia a nivel global, con especial énfasis en regiones donde los sistemas públicos de salud son limitados.</p>
+                    </div>
+                </div>
+
+                <div class="mission-row">
+                    <div class="mission-info full-width">
+                        <h3>La Doctrina Social de la Iglesia (DSI)</h3>
+                        <p>Toda esta acción se fundamenta en la DSI, un conjunto de enseñanzas y encíclicas papales que abordan la justicia social, los derechos de los trabajadores, el cuidado del medio ambiente (como la encíclica <em>Laudato si'</em>) y la búsqueda de la paz común.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

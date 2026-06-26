@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Universal - Iglesia Católica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Variables y Configuración General --- */
+:root {
+    --bg-color: #fafbfc;
+    --card-bg: #ffffff;
+    --primary-color: #a88a38;
+    --text-dark: #2b2d42;
+    --text-muted: #5c5e6e;
+    --border-color: #e9ecef;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo i {
+    color: var(--primary-color);
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--primary-color);
+}
+
+/* --- Contenedor del Artículo --- */
+.main-content {
+    padding: 60px 20px;
+}
+
+.article-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* --- Encabezado --- */
+.article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.article-header .category {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.article-header h1 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin: 12px 0 20px 0;
+}
+
+.article-header .lead {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.meta-divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--border-color);
+    margin: 30px auto 0 auto;
+}
+
+/* --- Bloques de Estructura --- */
+.article-body > p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.structure-block {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.structure-block:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.block-icon {
+    font-size: 22px;
+    color: var(--primary-color);
+    background-color: rgba(168, 138, 56, 0.08);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.block-text h3 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.block-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* --- Diseño Adaptable --- */
+@media (max-width: 600px) {
+    .article-container {
+        padding: 30px 20px;
+    }
+
+    .article-header h1 {
+        font-size: 28px;
+    }
+
+    .structure-block {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><i class="fa-solid fa-cross"></i> FeCatólica</a>
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="article-container">
+            
+            <header class="article-header">
+                <span class="category">Organización Global</span>
+                <h1>Estructura Universal de la Iglesia</h1>
+                <p class="lead">Una mirada a cómo se organiza y coordina una de las instituciones más grandes del mundo para mantener su unidad y misión.</p>
+                <div class="meta-divider"></div>
+            </header>
+
+            <section class="article-body">
+                
+                <p>La Iglesia Católica opera bajo un principio de comunión jerárquica. Aunque está presente en casi todas las naciones con diversas culturas e idiomas, mantiene una estructura unificada que asegura la continuidad de su doctrina y la administración de sus comunidades.</p>
+
+                <div class="structure-block">
+                    <div class="block-icon">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div class="block-text">
+                        <h3>El Papa (El Santo Padre)</h3>
+                        <p>Como obispo de Roma y sucesor de San Pedro, el Papa es el jefe supremo de la Iglesia Católica y la Santa Sede. Su función principal es pastorear a la Iglesia global y preservar la unidad de la fe cristiana.</p>
+                    </div>
+                </div>
+
+                <div class="structure-block">
+                    <div class="block-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="block-text">
+                        <h3>La Curia Romana y los Cardenales</h3>
+                        <p>Los cardenales forman el Colegio Cardenalicio, cuya misión es asesorar al Papa y elegir a su sucesor en un cónclave. La Curia Romana es el conjunto de dicasterios u oficinas que ayudan al Sumo Pontífice en el gobierno de la Iglesia.</p>
+                    </div>
+                </div>
+
+                <div class="structure-block">
+                    <div class="block-icon">
+                        <i class="fa-solid fa-gopuram"></i>
+                    </div>
+                    <div class="block-text">
+                        <h3>Diócesis y Obispos</h3>
+                        <p>Geográficamente, el mundo católico se divide en diócesis (o arquidiócesis), cada una dirigida por un obispo. Los obispos son considerados sucesores de los apóstoles y ejercen la autoridad docente, santificadora y de gobierno en sus territorios.</p>
+                    </div>
+                </div>
+
+                <div class="structure-block">
+                    <div class="block-icon">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <div class="block-text">
+                        <h3>Parroquias y Párrocos</h3>
+                        <p>La parroquia es la célula comunitaria más cercana al fiel. Está confiada a un párroco (sacerdote) bajo la autoridad del obispo diocesano. Es el lugar donde se celebran los sacramentos de manera cotidiana y se vive la vida comunitaria.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

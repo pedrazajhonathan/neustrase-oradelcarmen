@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Fe - Iglesia Católica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Variables y Configuración General --- */
+:root {
+    --bg-color: #fafbfc;
+    --card-bg: #ffffff;
+    --primary-color: #a88a38; /* Dorado litúrgico */
+    --text-dark: #2b2d42;
+    --text-muted: #5c5e6e;
+    --border-color: #e9ecef;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo i {
+    color: var(--primary-color);
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--primary-color);
+}
+
+/* --- Estructura del Artículo --- */
+.main-content {
+    padding: 60px 20px;
+}
+
+.article-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* --- Encabezado del Artículo --- */
+.article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.article-header .category {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.article-header h1 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin: 12px 0 20px 0;
+    line-height: 1.3;
+}
+
+.article-header .lead {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.meta-divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--border-color);
+    margin: 30px auto 0 auto;
+}
+
+/* --- Cuerpo del Artículo --- */
+.article-body > p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* Bloques de Puntos Clave */
+.core-point {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.core-point:last-of-type {
+    border-bottom: none;
+}
+
+.point-icon {
+    font-size: 22px;
+    color: var(--primary-color);
+    background-color: rgba(168, 138, 56, 0.08);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.point-text h3 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.point-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+/* Cita (Blockquote) */
+blockquote {
+    margin: 40px 0 20px 0;
+    padding: 20px 30px;
+    border-left: 4px solid var(--primary-color);
+    background-color: #fcfbfa;
+    font-style: italic;
+    color: var(--text-dark);
+    font-size: 17px;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote span {
+    display: block;
+    font-size: 13px;
+    font-style: normal;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* --- Diseño Adaptable (Responsive) --- */
+@media (max-width: 600px) {
+    .article-container {
+        padding: 30px 20px;
+    }
+
+    .article-header h1 {
+        font-size: 28px;
+    }
+
+    .core-point {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><i class="fa-solid fa-cross"></i> FeCatólica</a>
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="article-container">
+            
+            <header class="article-header">
+                <span class="category">Pilar Esencial</span>
+                <h1>Fundamentos de la Fe Católica</h1>
+                <p class="lead">Conoce los pilares teológicos y espirituales que sostienen la fe de millones de personas alrededor del mundo.</p>
+                <div class="meta-divider"></div>
+            </header>
+
+            <section class="article-body">
+                
+                <p>La fe católica no es solo un conjunto de normas, sino una experiencia comunitaria y personal basada en la revelación de Dios a lo largo de la historia. Sus fundamentos se entrelazan entre la Sagrada Escritura, la Tradición y el Magisterio de la Iglesia.</p>
+
+                <div class="core-point">
+                    <div class="point-icon">
+                        <i class="fa-solid fa-person-praying"></i>
+                    </div>
+                    <div class="point-text">
+                        <h3>1. El Misterio de la Santísima Trinidad</h3>
+                        <p>Es el dogma central de la fe cristiana. Los católicos creen en un solo Dios verdadero que existe eternamente en tres personas distintas pero consustanciales: el Padre (Creador), el Hijo (Redentor) y el Espíritu Santo (Santificador).</p>
+                    </div>
+                </div>
+
+                <div class="core-point">
+                    <div class="point-icon">
+                        <i class="fa-solid fa-book-bible"></i>
+                    </div>
+                    <div class="point-text">
+                        <h3>2. Jesucristo y el Evangelio</h3>
+                        <p>Jesús es reconocido como el Hijo de Dios hecho hombre, el Mesías anunciado en las Escrituras. Su vida, muerte en la cruz y posterior Resurrección constituyen el núcleo de la buena noticia (Evangelio), ofreciendo la salvación y la reconciliación de la humanidad con Dios.</p>
+                    </div>
+                </div>
+
+                <div class="core-point">
+                    <div class="point-icon">
+                        <i class="fa-solid fa-users-line"></i>
+                    </div>
+                    <div class="point-text">
+                        <h3>3. La Tradición Apostólica</h3>
+                        <p>La Iglesia se entiende a sí misma como continuadora de la misión encomendada por Cristo a sus apóstoles. Esta transmisión de la fe se mantiene viva a través de los siglos mediante la guía del Espíritu Santo y la sucesión de los obispos.</p>
+                    </div>
+                </div>
+
+                <blockquote>
+                    "La fe es la garantía de lo que se espera; la prueba de las realidades que no se ven." 
+                    <span>– Hebreos 11:1</span>
+                </blockquote>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

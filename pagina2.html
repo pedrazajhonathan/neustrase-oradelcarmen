@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Sacramentos - Iglesia Católica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Variables y Estilos Base --- */
+:root {
+    --bg-color: #fafbfc;
+    --card-bg: #ffffff;
+    --primary-color: #a88a38;
+    --text-dark: #2b2d42;
+    --text-muted: #5c5e6e;
+    --border-color: #e9ecef;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo i {
+    color: var(--primary-color);
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--primary-color);
+}
+
+/* --- Contenedor del Artículo --- */
+.main-content {
+    padding: 60px 20px;
+}
+
+.article-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* --- Encabezado --- */
+.article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.article-header .category {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.article-header h1 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin: 12px 0 20px 0;
+}
+
+.article-header .lead {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.meta-divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--border-color);
+    margin: 30px auto 0 auto;
+}
+
+/* --- Bloques de Contenido --- */
+.intro-text {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* Categorías */
+.sacrament-category {
+    margin-bottom: 45px;
+}
+
+.sacrament-category h2 {
+    font-size: 22px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.category-desc {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Elementos de Lista de Sacramentos */
+.sacrament-item {
+    background-color: #fafbfc;
+    padding: 20px;
+    border-left: 3px solid var(--border-color);
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.sacrament-item:hover {
+    border-left-color: var(--primary-color);
+    background-color: #f6f5f0;
+}
+
+.sacrament-item h3 {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.sacrament-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* --- Diseño Adaptable --- */
+@media (max-width: 600px) {
+    .article-container {
+        padding: 30px 20px;
+    }
+
+    .article-header h1 {
+        font-size: 28px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><i class="fa-solid fa-cross"></i> FeCatólica</a>
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="article-container">
+            
+            <header class="article-header">
+                <span class="category">Signos de Gracia</span>
+                <h1>Los Siete Sacramentos</h1>
+                <p class="lead">Los canales visibles instituidos por Cristo para recibir la gracia del Espíritu Santo a lo largo de las distintas etapas de la vida.</p>
+                <div class="meta-divider"></div>
+            </header>
+
+            <section class="article-body">
+                
+                <p class="intro-text">La teología católica divide los sacramentos en tres grandes grupos según el momento vital y espiritual en el que se reciben:</p>
+
+                <div class="sacrament-category">
+                    <h2>1. Sacramentos de Iniciación Cristiana</h2>
+                    <p class="category-desc">Sientan los fundamentos de la vida cristiana.</p>
+                    
+                    <div class="sacrament-item">
+                        <h3>Bautismo</h3>
+                        <p>El nacimiento a la nueva vida en Cristo. Limpia el pecado original y hace al fiel miembro de la Iglesia.</p>
+                    </div>
+                    <div class="sacrament-item">
+                        <h3>Confirmación</h3>
+                        <p>Consolida el bautismo. El fiel recibe la plenitud de los dones del Espíritu Santo para ser testigo de su fe.</p>
+                    </div>
+                    <div class="sacrament-item">
+                        <h3>Eucaristía</h3>
+                        <p>El centro de la vida cristiana, donde se recibe el cuerpo y la sangre de Cristo bajo las especies del pan y del vino.</p>
+                    </div>
+                </div>
+
+                <div class="sacrament-category">
+                    <h2>2. Sacramentos de Curación</h2>
+                    <p class="category-desc">Restauran el alma y el cuerpo mediante el perdón y la compasión divina.</p>
+                    
+                    <div class="sacrament-item">
+                        <h3>Penitencia (Reconciliación)</h3>
+                        <p>El perdón de los pecados cometidos después del bautismo, otorgando la reconciliación con Dios y la comunidad.</p>
+                    </div>
+                    <div class="sacrament-item">
+                        <h3>Unción de los Enfermos</h3>
+                        <p>Ofrece fuerza, paz y ánimo espiritual (y a veces alivio corporal) a los fieles que padecen enfermedades graves o vejez.</p>
+                    </div>
+                </div>
+
+                <div class="sacrament-category">
+                    <h2>3. Sacramentos al Servicio de la Comunidad</h2>
+                    <p class="category-desc">Orientados a la salvación y misión de los demás.</p>
+                    
+                    <div class="sacrament-item">
+                        <h3>Orden Sagrado</h3>
+                        <p>El sacramento por el cual algunos fieles son constituidos ministros sagrados (diáconos, sacerdotes y obispos) al servicio de la Iglesia.</p>
+                    </div>
+                    <div class="sacrament-item">
+                        <h3>Matrimonio</h3>
+                        <p>La unión santa entre un hombre y una mujer, bendecida por Dios para formar una familia y apoyarse mutuamente en la fe.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

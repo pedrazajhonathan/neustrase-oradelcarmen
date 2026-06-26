@@ -1,81 +1,194 @@
-/* ----------------------------------------   */
+/* style of the header */
 
-body{
+
+
+
+
+:root {
+    --bg-light: #fdfbf7;         /* Fondo crema/marfil muy suave */
+    --primary-brown: #5c4033;    /* Marrón profundo (madera/tierra) */
+    --accent-brown: #8b5a2b;     /* Marrón cálido texturizado */
+    --text-dark: #2c2520;        /* Marrón casi negro para máxima legibilidad */
+    --text-muted: #6b5e56;       /* Marrón grisáceo para textos secundarios */
+    --overlay-light: rgba(253, 251, 247, 0.88); /* Capa crema traslúcida */
+    --font-serif: 'Georgia', serif;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
 }
-header{
-    width: 100vw;
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-light);
+}
+
+/* --- Estilos de la Sección Hero --- */
+.hero-section {
+    position: relative;
     height: 100vh;
-    position: relative;
-}
-.init{
     width: 100%;
-    height: 100%;
-    position: relative;
-    background-image: url(assets/fondo\ de\ la\ pagina\ web.jpg);
-    background-size: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    /* Imagen de fondo clara (ej. arquitectura iluminada o vitral suave) */
+    background-image: url('https://images.unsplash.com/photo-1548625361-155de0cbb55a?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
-.init .saludo{
-    z-index: 1;
-    color: #070606;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-}
-.init .line{
-    color: #050505;
-    z-index: 1;
-    width: 50%;
-}
-.init .saludo_two{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    z-index: 1;
-    color: #000000;
-    text-transform: capitalize;
-}
-.init button{
-    z-index: 1;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 40%;
-    height: 40px;
-    border-radius: 10px;
-    background-color: blue;
-    border-color: transparent;
-    cursor: pointer;
-}
-.init a{
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: capitalize;
-    color: #fff;
-    padding: 10px 42%;
-}
-.background{
+
+/* Superposición clara */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(180deg , rgb(221, 221, 221) 0% , 70% , rgba(206, 201, 201, 0.637) 100%);
+    background: linear-gradient(135deg, var(--overlay-light) 60%, rgba(253, 251, 247, 0.7));
+    z-index: 1;
 }
 
-/* responsive */
+/* Contenedor Principal */
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 30px;
+    text-align: center;
+}
 
-@media (max-width:470px){
-    .init{
-        background-size: 100% 100%;
+/* Etiqueta Superior */
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(139, 90, 43, 0.08);
+    border: 1px solid var(--accent-brown);
+    color: var(--accent-brown);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Título */
+.hero-title {
+    font-family: var(--font-serif);
+    color: var(--text-dark);
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-title .highlight {
+    color: var(--primary-brown);
+    display: inline-block;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    color: var(--text-muted);
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-weight: 400;
+}
+
+/* Botones de Acción */
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-brown);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(92, 64, 51, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 90, 43, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-brown);
+    border: 2px solid var(--primary-brown);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(92, 64, 51, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Indicador de Desplazamiento */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+    40% { transform: translate(-50%, -8px); }
+    60% { transform: translate(-50%, -4px); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 42px;
     }
-    .init .saludo{
-        text-align: center;
+    
+    .hero-subtitle {
+        font-size: 16px;
     }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+
 }
 
 
@@ -192,7 +305,6 @@ header{
 .son_one{
     width: 200px;
     height: 300px;
-    box-shadow: 0px 0px 6px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,9 +313,12 @@ header{
     cursor: pointer;
     transition: all .3s ease-out;
     margin: 40px 0px;
+    border-radius: 10px;
+    
 }
 .son_one:hover{
     transform: translateY(-10px);
+    border-bottom: 6px solid rgb(109, 41, 41);
 }
 .father_img{
     width: 100%;
@@ -211,6 +326,7 @@ header{
     position: relative;
 }
 .father_img img{
+    border-radius: 10px;
     width: 100%;
     height: 100%;
 }
@@ -229,6 +345,7 @@ header{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
     text-transform: capitalize;
+    font-size: .9em;
 }
 .son_one .parrafo{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -236,6 +353,7 @@ header{
     position: absolute;
     bottom: 10px;
     left: 4px;
+    font-size: .8em;
     text-transform: capitalize;
 }
 
@@ -296,6 +414,7 @@ header{
     justify-content: center;
     padding: 20px 24px;
     box-sizing: border-box;
+    gap: 20px;
 }
 .container_1 img{
     width: 50%;
@@ -323,6 +442,7 @@ header{
     justify-content: center;
     padding: 20px 24px;
     box-sizing: border-box;
+    gap: 30px;
 }
 .container_2 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -382,22 +502,413 @@ header{
 /*------------ styles of the footer -------------*/
 
 
-footer{
-    width: 100vw;
+/* --- Variables del Sistema (Manteniendo consistencia) --- */
+:root {
+    --footer-bg: #1e1f29;       /* Fondo oscuro elegante */
+    --footer-bottom-bg: #15161d; /* Fondo aún más oscuro para el copyright */
+    --primary-color: #a88a38;    /* Dorado litúrgico sutil */
+    --text-light: #f8f9fa;
+    --text-muted: #a0a5b5;
+    --border-color: #2b2d3d;
+    --transition: all 0.3s ease;
+}
+
+/* --- Estilos Generales del Footer --- */
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--text-light);
+    padding: 70px 20px 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* --- Columnas Comunes --- */
+.footer-column{
     display: flex;
-    gap: 30px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    position: relative;
+    color: var(--text-light);
+}
+.footer-column a {
+    font-size: .9em;
+    font-weight: 600;
+    position: relative;
+    color: rgb(153, 152, 152);
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.footer-column a:hover{
+    color: rgb(170, 170, 42);
+    transform: translateX(3px);
+}
+
+
+/* Línea decorativa debajo de los títulos */
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* --- Columna 1: Identidad (Brand) --- */
+.footer-logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.footer-logo i {
+    color: var(--primary-color);
+}
+
+.brand-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Redes Sociales */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    background-color: #2b2d3d;
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px 10px;
-    background-color: rgb(160, 160, 160);
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--transition);
 }
-footer p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #fff;
-    font-style: italic;
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* --- Columna 2: Enlaces Rápidos --- */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+/* --- Columna 3: Información de Contacto --- */
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.4;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-top: 3px;
+}
+
+/* --- Columna 4: Boletín (Newsletter) --- */
+.newsletter-col p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    position: relative;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 14px 50px 14px 16px;
+    background-color: #2b2d3d;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
 }
 
 
+
+/* --- Barra Inferior (Copyright) --- */
+.footer-bottom {
+    background-color: var(--footer-bottom-bg);
+    padding: 25px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.bottom-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: var(--transition);
+}
+
+.bottom-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Adaptabilidad (Responsive) --- */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .bottom-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .bottom-links a {
+        margin: 0 10px;
+    }
+}
 
 /*----------- -------------------*/
+
+
+/* seccion 2*/
+
+/* --- Variables de Diseño y Reset --- */
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --primary-color: #a88a38; /* Dorado litúrgico sutil */
+    --text-dark: #2b2d42;
+    --text-muted: #6c757d;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+
+/* --- Contenedor Principal --- */
+.church-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.church-section .container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- Encabezado --- */
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.section-header .subtitle {
+    color: var(--primary-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.section-header h2 {
+    color: var(--text-dark);
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.section-header .divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --- Cuadrícula de Tarjetas (Grid) --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* --- Tarjeta Individual --- */
+.info-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--primary-color);
+}
+
+/* Iconos */
+.icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(168, 138, 56, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    font-size: 24px;
+    margin: 0 auto 25px auto;
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+}
+
+
+.icon-wrapper img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50% ,-50%);
+}
+
+/* Textos de la tarjeta */
+.info-card h3 {
+    color: var(--text-dark);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+.info-card a{
+    padding: 150px;
+    position: absolute;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+}
+
+/* --- Botón de Acción --- */
+.action-wrapper {
+    text-align: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(168, 138, 56, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #8e732e;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(168, 138, 56, 0.4);
+}
+
+/* --- Adaptabilidad Móvil (Responsive) --- */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .church-section {
+        padding: 50px 15px;
+    }
+}
+
+
+/*-------------------*/
